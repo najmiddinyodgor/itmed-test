@@ -7,22 +7,26 @@
 </template>
 
 <script>
-import CustomSelect from "../input/components/CustomSelect";
+import CustomSelect from "../../input/components/CustomSelect";
 import {mapGetters} from 'vuex'
-import field from "./models/field";
+import field from "../models/field";
+import hasRelation from "../models/hasRelation";
 
 export default {
   name: "TimespentField",
   components: {
     CustomSelect
   },
-  mixins: [field],
+  mixins: [field, hasRelation],
   computed: {
     ...mapGetters('fields', [
       'timespent'
     ]),
+    relations() {
+      return this.timespent
+    },
     options() {
-      return this.timespent.map(country => ({
+      return this.related.map(country => ({
         value: country.id,
         label: country.name
       }))

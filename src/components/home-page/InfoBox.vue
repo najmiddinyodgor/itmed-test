@@ -1,13 +1,11 @@
 <template>
-$END$
+  <div class="info-box">
+    <slot/>
+  </div>
 </template>
 
 <script>
 export default {
-name: "InfoBox"
+  name: "InfoBox"
 }
 </script>
-
-<style scoped>
-
-</style>

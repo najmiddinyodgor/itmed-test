@@ -1,0 +1,45 @@
+@import "utils/main";
+@import "spacing.scss";
+@import "page/main";
+@import "shared/main";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background: transparent;
+  border: none;
+}
+
+body {
+  font-family: 'Nunito', -apple-system, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: $font-light;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+a {
+  font: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-semibold;
+}
+
+button,
+label,
+input {
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style: none;
+}

@@ -1,7 +1,7 @@
 <template>
   <custom-date-picker
       v-model="mutableValue"
-      label="Въезд"
+      label="Дата рождения"
   />
 </template>
 
@@ -10,7 +10,7 @@ import CustomDatePicker from "../../input/components/CustomDatePicker";
 import field from "../models/field";
 
 export default {
-  name: "EntryField",
+  name: "BirthdateField",
   components: {
     CustomDatePicker
   },

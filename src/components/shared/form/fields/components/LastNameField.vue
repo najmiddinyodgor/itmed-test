@@ -1,7 +1,7 @@
 <template>
   <custom-text-input
       v-model="mutableValue"
-      label="Имя"
+      label="Фамилия"
   />
 </template>
 
@@ -10,7 +10,7 @@ import CustomTextInput from "../../input/components/CustomTextInput";
 import field from "../models/field";
 
 export default {
-  name: "FirstNameField",
+  name: "LastNameField",
   components: {
     CustomTextInput,
   },

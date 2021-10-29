@@ -7,16 +7,17 @@
 </template>
 
 <script>
-import CustomSelect from "../input/components/CustomSelect";
+import CustomSelect from "../../input/components/CustomSelect";
 import {mapGetters} from 'vuex'
-import field from "./models/field";
+import field from "../models/field";
+import hasRelation from "../models/hasRelation";
 
 export default {
   name: "TryCountField",
   components: {
     CustomSelect
   },
-  mixins: [field],
+  mixins: [field, hasRelation],
   props: {
     relative: {
       type: String,
@@ -25,12 +26,15 @@ export default {
   },
   computed: {
     ...mapGetters('fields', [
-      'try'
+      'tries'
     ]),
+    relations() {
+      return this.tries
+    },
     options() {
-      return this.try.map(country => ({
+      return this.related.map(country => ({
         value: country.id,
-        label: country.name
+        label: country.name,
       }))
     }
   }

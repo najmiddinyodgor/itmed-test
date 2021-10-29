@@ -1,0 +1,88 @@
+.form-group {
+  padding: 15px;
+
+  &__label {
+    @include font-big;
+
+    display: inline-block;
+    margin-bottom: 10px;
+
+    font-weight: $font-semibold;
+  }
+
+  &__wrap {
+    position: relative;
+    width: 100%;
+  }
+
+  .el-input,
+  .el-select {
+    width: 100%;
+
+    input {
+      @include font-small;
+      @include default-border-radius;
+      padding: 12px 15px;
+      width: 100%;
+
+      color: $text-light;
+      background-color: $bg-dark;
+      border: none;
+
+      &:hover {
+        background-color: $bg-secondary;
+      }
+
+      &:focus {
+        color: $text-primary;
+        background-color: $bg-light;
+      }
+    }
+
+    &__suffix-inner {
+      @include default-border-radius;
+      padding: 5px 0 2px;
+
+      background-color: $orange;
+
+      i {
+        font-weight: $font-semibold;
+        color: #fff;
+      }
+    }
+
+    &__prefix {
+      display: none;
+    }
+
+    &.is-focus {
+      input {
+        color: $text-primary;
+        background-color: $bg-light;
+      }
+    }
+  }
+}
+
+.el-select-dropdown__item {
+  &.selected {
+    color: $text-light;
+    background-color: $orange;
+  }
+
+  color: $orange;
+}
+
+.el-date-picker {
+  .available {
+    &:hover {
+      color: $text-primary !important;
+    }
+
+    &.current {
+      span {
+        background-color: $bg-primary !important;
+      }
+    }
+  }
+}

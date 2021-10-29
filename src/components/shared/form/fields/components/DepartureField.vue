@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import CustomDatePicker from "../input/components/CustomDatePicker";
-import field from "./models/field";
+import CustomDatePicker from "../../input/components/CustomDatePicker";
+import field from "../models/field";
 
 export default {
   name: "DepartureField",

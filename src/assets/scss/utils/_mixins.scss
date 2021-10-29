@@ -1,0 +1,13 @@
+@mixin default-shadow {
+  box-shadow: 0 20px 40px #0B1A73;
+}
+
+@mixin default-border-radius {
+  border-radius: 4px;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

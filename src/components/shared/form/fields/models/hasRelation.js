@@ -7,7 +7,7 @@ export default {
     },
     computed: {
         related() {
-
+            return this.relations.filter(relation => relation.relative === this.relative)
         }
     }
 }

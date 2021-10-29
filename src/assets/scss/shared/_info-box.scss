@@ -1,5 +1,23 @@
 .info-box {
-    padding: 25px 64px;
+  padding: 25px 64px;
 
-    border: 2px solid $bo;
+  border: 2px solid $border-light;
+
+  &__list {
+    @include flex-between;
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+    max-width: 55%;
+
+    color: $text-secondary;
+
+    li:nth-child(2n-1) {
+      margin-right: 50px;
+    }
+  }
+
+  .warning {
+    color: $orange;
+  }
 }

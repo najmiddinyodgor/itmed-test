@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import CustomSelect from "../input/components/CustomSelect";
+import CustomSelect from "../../input/components/CustomSelect";
 import {mapGetters} from 'vuex'
-import field from "./models/field";
+import field from "../models/field";
 
 export default {
   name: "VisaTypeField",

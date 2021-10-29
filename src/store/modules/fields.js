@@ -1,12 +1,44 @@
 export default {
+    namespaced: true,
+    name: 'fields',
     state: () => ({
         countries: [
             {id: "RU", name: "Россия"},
             {id: "DE", name: "Германия"},
             {id: "EE", name: "Эстония"},
         ],
+        types: [
+            {id: "bis", name: "Деловая виза", price: "20,80"},
+            {id: "tur", name: "Туристическая виза", price: "10,30"},
+            {id: "trz", name: "Транзитная виза", price: "50,50"},
+        ],
+        tries: [
+            {id: "single", name: "Одиночный заезд", relative: "RU", price: "2"},
+            {id: "single", name: "Одиночный заезд", relative: "DE", price: "3,5"},
+            {id: "single", name: "Одиночный заезд", relative: "EE", price: "4"},
+            {id: "multi", name: "Многоразовый заезд", relative: "RU", price: "5"},
+            {id: "multi", name: "Многоразовый заезд", relative: "DE", price: "4"},
+            {id: "multi", name: "Многоразовый заезд", relative: "EE", price: "3"},
+            {id: "permanent", name: "Постоянный заезд", relative: "RU", price: "2,5"},
+            {id: "permanent", name: "Постоянный заезд", relative: "DE", price: "1"},
+            {id: "permanent", name: "Постоянный заезд", relative: "EE", price: "5"},
+        ],
+        timespent: [
+            {id: "fast", name: "3 рабочих дня", relative: "RU", price: "5"},
+            {id: "fast", name: "3 рабочих дня", relative: "DE", price: "7"},
+            {id: "fast", name: "3 рабочих дня", relative: "EE", price: "9"},
+            {id: "middle", name: "10 рабочих дней", relative: "RU", price: "10,80"},
+            {id: "middle", name: "10 рабочих дней", relative: "DE", price: "15"},
+            {id: "middle", name: "10 рабочих дней", relative: "EE", price: "20"},
+            {id: "slow", name: "15-30 рабочих дней", relative: "RU", price: "15,70"},
+            {id: "slow", name: "15-30 рабочих дней", relative: "DE", price: "25"},
+            {id: "slow", name: "15-30 рабочих дней", relative: "EE", price: "35"},
+        ],
     }),
     getters: {
-        countries: (state) => state.countries
+        countries: (state) => state.countries,
+        types: (state) => state.types,
+        tries: (state) => state.tries,
+        timespent: (state) => state.timespent,
     }
 }
